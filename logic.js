@@ -38,7 +38,7 @@ function doIt() {
             ctx.drawImage(moon,x,y,88,84); // draws the image at the specified x and y location
             ctx.drawImage(mountains,0,0,720,300);
             ctx.drawImage(stars,-10,0,720,300);
-        }, 800);
+        }, 250);
 
 
     },false);
