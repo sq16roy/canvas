@@ -15,15 +15,15 @@ function doIt() {
     var y = 90;
     stars.src= "assets/stars.png"; // specifies the location of the image
     mountains.src= "assets/mountains.png";
-    moon.src= "assets/moon.png"; 
-     
-    
+    moon.src= "assets/moon.png";
+
+
     window.addEventListener("load", function(){
         ctx.fillStyle=grd;
-        ctx.fillRect(0,0,400,150);
-        ctx.drawImage(moon,165,90,40,40); // draws the image at the specified x and y location
-        ctx.drawImage(mountains,0,0,300,150);
-        ctx.drawImage(stars,-10,0,300,150);
+        ctx.fillRect(0,0,720,300);
+        ctx.drawImage(moon,165,90,88,84); // draws the image at the specified x and y location
+        ctx.drawImage(mountains,0,0,720,300);
+        ctx.drawImage(stars,-10,0,720,300);
         setInterval(function(){
             if(x<290){
                 x = x+12;
@@ -31,17 +31,17 @@ function doIt() {
             } else {
                 x = 165;
                 y = 90;
-            }   
-            ctx.clearRect(0, 0, canvas.width, canvas.height);                        
+            }
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle=grd;
-            ctx.fillRect(0,0,400,150);
-            ctx.drawImage(moon,x,y,40,40); // draws the image at the specified x and y location
-            ctx.drawImage(mountains,0,0,300,150);
-            ctx.drawImage(stars,-10,0,300,150);
+            ctx.fillRect(0,0,720,300);
+            ctx.drawImage(moon,x,y,88,84); // draws the image at the specified x and y location
+            ctx.drawImage(mountains,0,0,720,300);
+            ctx.drawImage(stars,-10,0,720,300);
         }, 800);
-        
-        
+
+
     },false);
 
-   
+
 };
