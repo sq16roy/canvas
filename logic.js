@@ -11,7 +11,7 @@ function doIt() {
     var stars = new Image(); //creates a variable for a new image
     var mountains = new Image();
     var moon = new Image();
-    var x = 430;
+    var x = 480;
     var y = 180;
     stars.src= "assets/stars.png"; // specifies the location of the image
     mountains.src= "assets/mountains.png";
@@ -26,10 +26,10 @@ function doIt() {
         ctx.drawImage(stars,-10,0,720,300);
         setInterval(function(){
             if(x<700){
-                x = x+12;
-                y = y-10;
+                x++;
+                y--;
             } else {
-                x = 430;
+                x = 480;
                 y = 180;
             }
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -38,7 +38,7 @@ function doIt() {
             ctx.drawImage(moon,x,y,88,84); // draws the image at the specified x and y location
             ctx.drawImage(mountains,0,0,720,300);
             ctx.drawImage(stars,-10,0,720,300);
-        }, 250);
+        }, 15);
 
 
     },false);
